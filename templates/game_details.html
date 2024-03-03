@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Details</title>
+</head>
+<body>
+    <h1>Game Details</h1>
+    <form method="POST" action="/game_details">
+        <input type="text" name="search" placeholder="Search by game name...">
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        {% for game in games %}
+            <li>Rank: {{ game['Rank'] }}, Name: {{ game['Name'] }}, Global Sales: {{ game['Global_Sales'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
